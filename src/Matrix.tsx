@@ -24,9 +24,9 @@ const streams = cols.map(() =>
 new Array(3)
     .fill(0)
     .map(() => [
-    ...randomArray(1, 4, true),
-    ...randomArray(4, 16),
-    ...randomArray(2, 8, true),
+        ...randomArray(1, 4, true),
+        ...randomArray(4, 16),
+        ...randomArray(2, 8, true),
     ])
     .flat()
 );
@@ -45,17 +45,17 @@ export const Matrix = () => {
             <Fill color="black" />
             <Group>
                 <BlurMask blur={8} style="solid" />
-                    {cols.map((_i, i) =>
+                {cols.map((_i, i) =>
                     rows.map((_j, j) => (
                         <Symbol
-                            symbols={symbols}
-                            font={font}
-                            timestamp={clock}
-                            key={`${i}-${j}`}
-                            i={i}
-                            j={j}
-                            stream={streams[i]}
-                            symbol={symbol}
+                        symbols={symbols}
+                        font={font}
+                        timestamp={clock}
+                        key={`${i}-${j}`}
+                        i={i}
+                        j={j}
+                        stream={streams[i]}
+                        symbol={symbol}
                         />
                     ))
                 )}
